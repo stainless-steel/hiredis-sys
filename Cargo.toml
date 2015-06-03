@@ -7,3 +7,8 @@ repository = "https://github.com/stainless-steel/hiredis-sys"
 homepage = "https://github.com/stainless-steel/hiredis-sys"
 documentation = "https://stainless-steel.github.io/hiredis-sys"
 description = "The package provides bindings to Hiredis."
+build = "build.rs"
+links = "hiredis"
+
+[dependencies]
+libc = "*"
