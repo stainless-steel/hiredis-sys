@@ -1,5 +1,7 @@
 use libc::{c_char, c_int, c_void, size_t, timeval};
 
+use read::redisReader;
+
 #[repr(C)]
 pub struct redisContext {
     pub err: c_int,
@@ -13,6 +15,7 @@ extern "C" {
     pub fn redisConnectWithTimeout(ip: *const c_char, port: c_int, tv: timeval)
                                    -> *mut redisContext;
 
+    pub fn redisReaderCreate() -> *mut redisReader;
     pub fn redisFree(c: *mut redisContext);
     pub fn redisGetReply(c: *mut redisContext, reply: *mut *mut c_void) -> c_int;
     pub fn freeReplyObject(reply: *mut c_void);
