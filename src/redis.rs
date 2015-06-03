@@ -11,7 +11,7 @@ extern "C" {
     pub fn redisConnect(ip: *const c_char, port: c_int) -> *mut redisContext;
 
     pub fn redisConnectWithTimeout(ip: *const c_char, port: c_int, tv: timeval)
-                                  -> *mut redisContext;
+                                   -> *mut redisContext;
 
     pub fn redisFree(c: *mut redisContext);
     pub fn redisGetReply(c: *mut redisContext, reply: *mut *mut c_void) -> c_int;
