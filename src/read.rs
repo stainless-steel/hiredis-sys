@@ -9,6 +9,13 @@ pub const REDIS_ERR_PROTOCOL: c_int = 4;
 pub const REDIS_ERR_OOM: c_int = 5;
 pub const REDIS_ERR_OTHER: c_int = 2;
 
+pub const REDIS_REPLY_STRING: c_int = 1;
+pub const REDIS_REPLY_ARRAY: c_int = 2;
+pub const REDIS_REPLY_INTEGER: c_int = 3;
+pub const REDIS_REPLY_NIL: c_int = 4;
+pub const REDIS_REPLY_STATUS: c_int = 5;
+pub const REDIS_REPLY_ERROR: c_int = 6;
+
 #[repr(C)]
 pub struct redisReader {
     pub err: c_int,
