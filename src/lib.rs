@@ -21,7 +21,7 @@ mod tests {
         unsafe {
             let context = ::redisConnect(c_str!("127.0.0.1"), 4242);
             assert!(!context.is_null());
-            assert!((*context).err != ::REDIS_OK);
+            assert!((*context).err == ::REDIS_OK);
             ::redisFree(context);
         }
     }
