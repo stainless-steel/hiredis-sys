@@ -1,4 +1,4 @@
-use std::{env, fs, process};
+use std::{env, process};
 use std::path::PathBuf;
 
 macro_rules! cmd(
@@ -21,15 +21,15 @@ macro_rules! run(
     );
 );
 
-const NAME: &'static str = "libhiredis.a";
-
 fn main() {
     let source = PathBuf::from(&get!("CARGO_MANIFEST_DIR")).join("source");
     let output = PathBuf::from(&get!("OUT_DIR"));
 
-    run!(cmd!("make").arg(NAME).arg("DEBUG=").current_dir(&source));
-    ok!(fs::copy(&source.join(NAME), &output.join(NAME)));
+    run!(cmd!("make").arg("install").arg("DEBUG=").arg("PREFIX=")
+                     .arg(&format!("DESTDIR={}", output.display()))
+                     .current_dir(&source));
 
+    println!("cargo:root={}", output.display());
     println!("cargo:rustc-link-lib=static=hiredis");
-    println!("cargo:rustc-link-search={}", output.display());
+    println!("cargo:rustc-link-search={}", output.join("lib").display());
 }
