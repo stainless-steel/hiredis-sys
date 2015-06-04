@@ -30,6 +30,6 @@ fn main() {
                      .current_dir(&source));
 
     println!("cargo:root={}", output.display());
-    println!("cargo:rustc-link-lib=static=hiredis");
+    println!("cargo:rustc-link-lib=dylib=hiredis");
     println!("cargo:rustc-link-search={}", output.join("lib").display());
 }
