@@ -19,7 +19,7 @@ mod tests {
     #[test]
     fn connect() {
         unsafe {
-            let context = ::redisConnect(c_str!("127.0.0.1"), 4242);
+            let context = ::redisConnect(c_str!("127.0.0.1"), 6379);
             assert!(!context.is_null());
             assert!((*context).err == ::REDIS_OK);
             ::redisFree(context);
