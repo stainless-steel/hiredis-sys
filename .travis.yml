@@ -1,5 +1,5 @@
 language: rust
-sudo: required
+sudo: false
 
 before_script:
   - redis-server tests/fixtures/redis.conf
