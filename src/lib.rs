@@ -1,3 +1,7 @@
+//! Bindings to [Hiredis][1].
+//!
+//! [1]: https://github.com/redis/hiredis
+
 extern crate libc;
 
 mod read;
