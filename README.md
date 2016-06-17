@@ -4,16 +4,16 @@ The package provides bindings to [Hiredis][1].
 
 ## [Documentation][doc]
 
-## Contributing
+## Contribution
 
-1. Fork the project.
-2. Implement your idea.
-3. Open a pull request.
+Your contribution is highly appreciated. Do not hesitate to open an issue or a
+pull request. Note that any contribution submitted for inclusion in the project
+will be licensed according to the terms given in [LICENSE.md](LICENSE.md).
 
 [1]: https://github.com/redis/hiredis
 
-[version-img]: https://img.shields.io/crates/v/hiredis-sys.svg
-[version-url]: https://crates.io/crates/hiredis-sys
+[doc]: https://stainless-steel.github.io/hiredis-sys
 [status-img]: https://travis-ci.org/stainless-steel/hiredis-sys.svg?branch=master
 [status-url]: https://travis-ci.org/stainless-steel/hiredis-sys
-[doc]: https://stainless-steel.github.io/hiredis-sys
+[version-img]: https://img.shields.io/crates/v/hiredis-sys.svg
+[version-url]: https://crates.io/crates/hiredis-sys
