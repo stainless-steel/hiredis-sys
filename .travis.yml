@@ -1,5 +1,6 @@
 language: rust
 sudo: false
+
 rust:
   - stable
   - beta
@@ -9,12 +10,11 @@ before_script:
   - redis-server tests/fixtures/redis.conf
 
 after_success:
-  - curl https://stainless-steel.github.io/travis/after_success.sh | bash
+  - curl https://stainless-steel.github.io/travis/documentation.sh | bash
 
 env:
   global:
-    - RUSTDOC_VERSION=nightly
-    - secure: DXGxGvhhXSVALMTwdDTc+gKtVqB1kNTe1H/1bUf2UJG3XqwrPZxMIvY2lYCOaqxaigZTuK1TPaQa3QFbE8TC8Tij3N+A2JA6PTDTy/i8RXlcGMBvoX9BptutNHF1iX0J/RWY5mlzZbcMOSajBYIeuJsaKw12NKclsmnkEoURRnNaFimrgnnX53c1neIpyd7ibag6egBsJ/LU/CDe2MfiO7xbINl8iyudwdGrQF1HeP97vgfmdvF3QTx8/Hx9p6uMgpHeQ0MMTLvwu31UPvRllHE9tEmUdU6rNdYrQU4VM7TaqhUiw/JBynvW4UEGDzp4uemX7/0bHzj9IYnjoLh5P/b6ROYFHRkWGO+TrWYCO77Vp3kT4DCAIQMSJ8kpdL17i40iBpyYiicoeW49K5gy1qjRSpblmVRr2tBddt79daj9J4fRtE2ZFWuz2hwaJ30qm2Z1re48f5EilbIwEyVaN2y30nseaY+jlQjJubscMz7HjAIyP10VTgAFl5cz9sCD/6vVORzgf9WpGuqKy3KQ9tPsnyxnQfP0bhhRRe2ypbVcaexHeJ/Alwkyiz0nzsiw08P5bHDLYH5SmOsCNOfvyp4kcF+GuvsVFTdKHBokP24HMlmdnHyfcQ+MQFXfN999jGB7D+oTQy4LBxCveEaVUPtQ8IYlZdgWio6akloTJFI=
+    - secure: hyDgK7PiTQQQBAHGU0P7caPF1Cuix1cNOdzfGPcw2UHa7c4UjwR9tVhueQ5QTxH0m9qEcBuPSne9+rGLetmOZ1Bp9/t0UZRTTuol7K5IilQi5d4qZvpphR0lJPXDb8/DTCk+TJSvttnhoZ3J9pQRlQYLp65+d9QcRKz254yjHiSJ2LXe+Dl9j/ys9GwN3PHXMl1lXa7jljZKCbNyLOFDogkMDR7gW9lUjK1t0S7ET/nLS7ABxiZBO4eV92miHh5UEdTk8prcdgvTyHFEk+NcleqKMuBrxCiZ99GjqG/8m0b7XhTQB943wsV8a1GZno8+tpbRBadkFIJhdA2GXKmpdvmVS8GOQrKNK7BNVsUydh5hFsHDY3QXbkfhyIBUItCas+/G4omzNYhvTpxr/elmkkEx5HxIZ5WFaPNBOBgP9ycrrQgu4Nhyu49+O1Xen77sguHM3Ekip1un0jZMiTDGLj2X8ewJCOW172DbgAyAP3qTVkRkwtKetsK624RIhWY1DCqcNY4NjOcjs3RNVipC73NgAfBsrpg+u5qZ0zsNVNwCVYTUM589fRrFBOaIemS/VK0WdsBa0fLTA2BeawIrbgxBZYqgEaNTIlzQrVlSKdG5hj/vADcdT0aptEEeubpWTLpEoEeQfFwNCwAYkalbAGnWki9bD3lwgvd2UV73bDY=
 
 notifications:
   email: false
